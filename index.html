@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuestra historia ♡</title>
+<style>
+:root{--pink:#ff6f9b;--rose:#d94f78;--cream:#fff8fa;--ink:#5b3945;--soft:#ffe3ec}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,serif;overflow-x:hidden}
+button,a{font:inherit}.screen{position:fixed;inset:0;background:radial-gradient(circle at 50% 35%,#fff,#ffdce8 65%,#ffbfd3);display:flex;align-items:center;justify-content:center;z-index:20;text-align:center;padding:25px;transition:opacity .8s,visibility .8s}.screen.hide{opacity:0;visibility:hidden}
+.openbox{max-width:600px}.mini{letter-spacing:4px;text-transform:uppercase;font:12px Arial;color:#9b5a70}.openbox h1{font-size:clamp(48px,11vw,90px);font-weight:normal;color:var(--rose);margin:15px 0}.openbox p{font-size:20px;line-height:1.7}.open{border:0;background:var(--rose);color:white;border-radius:99px;padding:15px 30px;cursor:pointer;box-shadow:0 10px 25px #c34e7240}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:40px;position:relative;background:linear-gradient(180deg,#ffe5ee,#fff8fa)}
+.hero-inner{max-width:850px}.eyebrow{letter-spacing:5px;text-transform:uppercase;font:12px Arial;color:#a35b72}.hero h1{font-size:clamp(60px,13vw,130px);line-height:.9;font-weight:normal;color:var(--rose);margin:25px 0 20px}.hero p{font-size:clamp(18px,3vw,25px);line-height:1.7}.pill{display:inline-block;margin:18px 0;padding:11px 18px;border:1px solid #f3a6ba;border-radius:999px}
+.scroll{display:inline-block;margin-top:25px;color:var(--rose);text-decoration:none}
+section{max-width:1050px;margin:auto;padding:90px 22px}h2{text-align:center;color:var(--rose);font-size:40px;font-weight:normal;margin:0 0 45px}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .9s,transform .9s}.reveal.show{opacity:1;transform:none}
+.card{background:#fff;border-radius:30px;padding:32px;box-shadow:0 14px 40px #713b4c12;line-height:1.85;font-size:18px}
+.letter{max-width:780px;margin:auto}.letter p{margin:0 0 18px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.photo{aspect-ratio:1;border-radius:25px;overflow:hidden;background:var(--soft);box-shadow:0 10px 30px #713b4c12}.photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.photo:hover img{transform:scale(1.06)}
+.timeline{max-width:800px;margin:auto;display:grid;gap:18px}.moment{display:grid;grid-template-columns:85px 1fr;gap:18px}.month{background:#ffd1de;border-radius:18px;padding:15px 8px;text-align:center;font-weight:bold;color:#8e4058;height:max-content}
+.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin:0 auto}.unit{background:#fff;border-radius:22px;padding:20px;text-align:center;box-shadow:0 10px 30px #713b4c10}.num{font-size:35px;color:var(--rose)}.label{font:11px Arial;text-transform:uppercase;letter-spacing:2px;color:#9d6a7a}
+.final{text-align:center}.final .heart{font-size:75px;color:var(--rose);animation:pulse 1.4s infinite}.final h2{margin-bottom:15px}
+@keyframes pulse{50%{transform:scale(1.15)}}footer{text-align:center;padding:40px;color:#a36a7c}
+.floating{position:fixed;bottom:-40px;z-index:2;color:#f080a2;opacity:.35;pointer-events:none;animation:float 10s linear forwards}@keyframes float{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media(max-width:700px){.gallery{grid-template-columns:repeat(2,1fr)}.counter{grid-template-columns:repeat(2,1fr)}.moment{grid-template-columns:65px 1fr}.hero{padding:25px 18px}}
+</style>
+</head>
+<body>
+
+<div class="screen" id="screen">
+  <div class="openbox">
+    <div class="mini">Una sorpresa para ti</div>
+    <h1>♡</h1>
+    <h2 style="font-size:45px;margin:0;color:#d94f78">Nuestra historia</h2>
+    <p>Preparé este pequeño rincón para celebrar nuestros 11 meses.</p>
+    <button class="open" onclick="abrir()">Abrir nuestra historia ✨</button>
+  </div>
+</div>
+
+<audio id="music" loop>
+  <source src="musica/nuestra-cancion.mp3" type="audio/mpeg">
+</audio>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">para mi persona favorita</div>
+    <h1>11 meses<br>contigo ♡</h1>
+    <p>11 meses de risas, abrazos, conversaciones, aventuras y recuerdos que quiero guardar para siempre.</p>
+    <div class="pill">[20-10-2025]</div><br>
+    <a class="scroll" href="#contador">Nuestra historia ↓</a>
+  </div>
+</header>
+
+<section id="contador" class="reveal">
+  <h2>El tiempo que llevamos juntos ⏳</h2>
+  <div class="counter">
+    <div class="unit"><div class="num" id="days">—</div><div class="label">días</div></div>
+    <div class="unit"><div class="num" id="hours">—</div><div class="label">horas</div></div>
+    <div class="unit"><div class="num" id="minutes">—</div><div class="label">minutos</div></div>
+    <div class="unit"><div class="num" id="seconds">—</div><div class="label">segundos</div></div>
+  </div>
+  <p style="text-align:center;margin-top:20px">♡</p>
+</section>
+
+<section class="reveal">
+  <h2>Una carta para ti 💌</h2>
+  <div class="card letter">
+    <!-- EDITÁ ESTE TEXTO -->
+    <p>mi vida,</p>
+    <p>te amo tanto que es dificil de expresar pero todo con vos es mas hermoso, andar en auto, cocinar, pasear, ver una peli, incluso lo mas simple como tomar mates o estar acostados en silencio. hasta los momentos malos se vuelven algo sin importancia si estas vos, no se siquiera como lo haces pero tenes esa magia de devolverme a la vida. desde esa noche en la que no sabias donde meterte de la verguenza porque aparecio tu vieja hasta ahora me hiciste increiblemente feliz, espero durar años y años a tu lado pq sos la mujer mas hermosa que conoci en mi vida, todos esos detalles tuyos, esa magia que tenes es simplemente increible, te amo demasiado mi vida, nunca lo olvides ni dejes que ese corazon deje de sentir ni que esa sonrisa deje de brillar, porque es lo que me da vida. te amo con todo mi corazon preciosa, gracias por ser esa mujer con la que siempre soñe.</p>
+    <p>Gracias por todos los momentos que compartimos, por las risas, por las charlas y por hacer que tantos días normales se conviertan en recuerdos especiales.</p>
+    <p>Estos 11 meses son solamente una parte de todo lo que espero que podamos vivir juntos. Quiero seguir llenando esta página de fotos, aventuras y momentos que algún día vamos a mirar y recordar con una sonrisa.</p>
+    <p><strong>Felices 11 meses, mi amor. Te amo muchisimo. ♡</strong></p>
+  </div>
+</section>
+
+<section class="reveal">
+  <h2>Nuestros momentos 📸</h2>
+  <div class="gallery">
+    <div class="photo"><img src="fotos/foto1.jpg" alt="Recuerdo 1"></div>
+    <div class="photo"><img src="fotos/foto2.jpg" alt="Recuerdo 2"></div>
+    <div class="photo"><img src="fotos/foto3.jpg" alt="Recuerdo 3"></div>
+    <div class="photo"><img src="fotos/foto4.jpg" alt="Recuerdo 4"></div>
+    <div class="photo"><img src="fotos/foto5.jpg" alt="Recuerdo 5"></div>
+    <div class="photo"><img src="fotos/foto6.jpg" alt="Recuerdo 6"></div>
+  </div>
+  <p style="text-align:center"></p>
+</section>
+
+<section class="reveal">
+  <h2>11 meses, 11 recuerdos 🌷</h2>
+  <div class="timeline">
+    <div class="moment"><div class="month">1</div><div class="card"><b>Nuestro comienzo</b><br>me acuerdo cuando empezamos a salir, me habia subido al auto re nervioso y cuando me llego el mensaje tuyo me volvi loco, creo que fue el regreso a casa mas emocionante q tuve.</div></div>
+    <div class="moment"><div class="month">2</div><div class="card"><b>Un momento especial</b><br>cuando saliste de estar internada y tu viejo me dijo de ir a comer un asado, dios mio como nos cagamos de risa esa noche, tenerte a mi lado despues de todos esos dias fue increible.</div></div>
+    <div class="moment"><div class="month">3</div><div class="card"><b>Una aventura</b><br>cuando nos fuimos a areco y nos fuimos de cabeza a la pile, me diverti demasiado tirandote agua cada q me veias.</div></div>
+    <div class="moment"><div class="month">4</div><div class="card"><b>Una fecha especial</b><br>cada dia es especial a tu lado de alguna forma, incluso hay veces que me olvido de q estamos por cumplir meses porque cada dia a tu lado es igual de lindo.</div></div>
+    <div class="moment"><div class="month">5</div><div class="card"><b>nuestras risas</b><br>cada vez que nos estallamos de la risa me nublo, cada vez que rio junto a vos es una muestra de que a pesar de todo, pude volver a sentirme vivo gracias a vos.</div></div>
+    <div class="moment"><div class="month">6</div><div class="card"><b>Llegamos a medio año</b><br>cuando llegamos a los 6 meses y me diste ese albun hecho a mano con nuestras fotos fue hermoso, senti una calidez enorme y una felicidad que hace mucho no tenia, haces muy buenos regalos.</div></div>
+    <div class="moment"><div class="month">7</div><div class="card"><b>Otro recuerdo</b><br>recuerdo cuando fuimos a ver los minions y estuvimos todo el rato desde que salimos hablando como si fueramos minions y la gente nos miraba como si nos faltaran varios jugadores, lo cual no era algo muy errado.</div></div>
+    <div class="moment"><div class="month">8</div><div class="card"><b>Un día inolvidable</b><br>cuando hicimos la torta por cumplir meses, estuvimos todo el dia y no la quisimos comer de la poca pinta que tenia pero las ganas no faltaron.</div></div>
+    <div class="moment"><div class="month">9</div><div class="card"><b>Algo que amo de nosotros</b><br>amo que siempre que tenemos una dificultad, una discusion o cualquier cosa siempre terminamos solucionandolo sin ni siquiera saber como, pero lo hacemos y eso me encanta.</div></div>
+    <div class="moment"><div class="month">10</div><div class="card"><b>Casi un año</b><br>ya cabeceando nuestro primer aniversario y hay algo que estoy muy seguro, quiero que allan muchisimos mas con tal de que sean a tu lado, todo es mas hermoso a tu lado.</div></div>
+    <div class="moment"><div class="month">11</div><div class="card"><b>Hoy ♡</b><br>despues de estos 11 meses y de haber pasado por un monton de cosas me queda muy en claro que sos vos quien quiero que sea mi futura esposa, mi amor eterno, la madre de mis hijos y la persona con la que comparta toda mi vida, fuiste y sos increible.</div></div>
+  </div>
+</section>
+
+<section class="reveal final">
+  <div class="heart">♥</div>
+  <h2>Y esto recién empieza...</h2>
+  <div class="card">
+    <p>Quiero que dentro de mucho tiempo podamos volver a esta página y agregar muchos más recuerdos.</p>
+    <p style="font-size:25px;color:#d94f78"><strong>11 meses ♡ y contando...</strong></p>
+    <p>anto &nbsp; ♡ &nbsp; titi</p>
+  </div>
+</section>
+
+<footer>Hecho especialmente para nuestra historia ♡</footer>
+
+<script>
+// ================================
+// CAMBIÁ ESTA FECHA POR LA DE USTEDES
+// Formato: AAAA-MM-DDTHH:MM:SS
+// ================================
+const inicio = new Date("2025-10-20T00:00:00");
+
+function actualizarContador(){
+  const ahora = new Date();
+  let diferencia = Math.max(0, ahora - inicio);
+  const dias = Math.floor(diferencia / 86400000);
+  diferencia %= 86400000;
+  const horas = Math.floor(diferencia / 3600000);
+  diferencia %= 3600000;
+  const minutos = Math.floor(diferencia / 60000);
+  const segundos = Math.floor((diferencia % 60000) / 1000);
+  document.getElementById("days").textContent=dias;
+  document.getElementById("hours").textContent=horas;
+  document.getElementById("minutes").textContent=minutos;
+  document.getElementById("seconds").textContent=segundos;
+}
+setInterval(actualizarContador,1000); actualizarContador();
+
+function abrir(){
+  document.getElementById("screen").classList.add("hide");
+  const music=document.getElementById("music");
+  music.play().catch(()=>{});
+}
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")});
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+function heart(){
+  const h=document.createElement("div");
+  h.className="floating";
+  h.textContent=Math.random()>.5?"♡":"♥";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(15+Math.random()*25)+"px";
+  h.style.animationDuration=(7+Math.random()*6)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),14000);
+}
+setInterval(heart,1200);
+</script>
+</body>
+</html>
